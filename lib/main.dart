@@ -1,3 +1,4 @@
+import 'package:business_menagement_app/core/di/service_locator.dart';
 import 'package:business_menagement_app/core/router/app_router.dart';
 import 'package:business_menagement_app/core/theme/app_theme.dart';
 import 'package:flutter/material.dart';
@@ -7,6 +8,7 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await initializeDateFormatting();
+  await setupServiceLocator();
   runApp(const BusinessManagementApp());
 }
 
